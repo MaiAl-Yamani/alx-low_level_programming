@@ -7,17 +7,17 @@
 
 int main(void)
 {
-	char ch = '0';
+	int n = 0;
 
-	while (ch <= '9')
+	while (n <= 9)
 	{
-		putchar(ch);
-		if (ch != '9')
+		putchar('0' + n);
+		if (n != 9)
 		{
 			putchar(',');
 			putchar(' ');
 		}
-		ch++;
+		n++;
 	}
 	putchar('\n');
 
