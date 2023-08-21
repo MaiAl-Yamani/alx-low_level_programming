@@ -1,8 +1,7 @@
-
 /**
  * reset_to_98 - reset n value to 98 
- *
- * Return: Always 0.
+ * @*n: first member (pointer)
+ * Return: no return (void).
  */
 void reset_to_98(int *n)
 {
