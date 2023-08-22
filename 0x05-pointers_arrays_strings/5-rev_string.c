@@ -7,13 +7,13 @@
  */
 void rev_string(char *s)
 {
-        int n;
+	int n;
 
-        for (n = -2; ; s--)
-        {
-                _putchar(s[n]);
-                n--;
-        }
+	for (n = -2; ; s--)
+	{
+		_putchar(s[n]);
+		n--;
+	}
 
-        _putchar('\n');
+	_putchar('\n');
 }
