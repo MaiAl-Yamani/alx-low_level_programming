@@ -1,14 +1,15 @@
 #include "main.h"
 /**
- * int _strlen - return the length of a string
+ * _strlen - return the length of a string
  * @s: pinter to char s
  *
  * Description: returns the length of a string
- * return: int i 
+ * return: length of string
  */
 int _strlen(char *s)
 {
 	int i = 0;
+	
 	for (; *s != '\0'; s++)
 	{
 		i++;
