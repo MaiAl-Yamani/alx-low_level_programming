@@ -4,7 +4,7 @@
  * @s: pinter to char s
  *
  * Description: returns the length of a string
- * return: string length
+ * Return: string length
  */
 int _strlen(char *s)
 {
