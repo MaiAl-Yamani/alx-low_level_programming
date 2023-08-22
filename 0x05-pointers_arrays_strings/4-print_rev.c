@@ -7,8 +7,6 @@
  */
 void print_rev(char *s)
 {
-	int n = -2;
-
 	for (; ; s--)
 	{
 		_putchar(*s);
