@@ -13,7 +13,10 @@ void puts2(char *str)
 		{
 			break;
 		}
-		_putchar(*str);
+		else
+		{
+			_putchar(*str);
+		}
 	}
 
 	_putchar('\n');
