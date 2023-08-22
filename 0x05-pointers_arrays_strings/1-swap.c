@@ -3,8 +3,7 @@
  * void swap_int(int *a, int *b) - swaps two integer numbers
  * @a: pointer to a
  * @b: pointer to b
- * Description: swaps two numbers
- * return: void
+ * Description: swaps two integer numbers.
  */
 void swap_int(int *a, int *b)
 {
