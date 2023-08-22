@@ -7,7 +7,7 @@
  */
 void print_rev(char *s)
 {
-	int n;
+	int n = -1;
 
 	for (s[n] = '\0'; ; s--)
 	{
@@ -19,6 +19,7 @@ void print_rev(char *s)
 		{
 			_putchar(s[n]);
 		}
+		n--;
 	}
 
 	_putchar('\n');
