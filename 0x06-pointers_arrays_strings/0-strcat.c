@@ -6,7 +6,7 @@
  * @dest: the second string variable pointer to dest
  *
  * Description: concatinate two string variables and returns the concatinated string
- * Return: dest variable after concatination
+ * Return: (dest) variable after concatination
  */
 char *_strcat(char *dest, char *src)
 {
