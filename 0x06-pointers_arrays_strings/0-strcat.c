@@ -5,7 +5,7 @@
  * @src: the first string variable pointer to src
  * @dest: the second string variable pointer to dest
  *
- * Description: concatinate two string variables and returns the concatinated string
+ * Description: concatinate two string variables
  * Return: (dest)
  */
 char *_strcat(char *dest, char *src)
@@ -19,5 +19,5 @@ char *_strcat(char *dest, char *src)
 	}
 	dest[dest_len + i] = '\0';
 
-	return dest;
+	return (dest);
 }
