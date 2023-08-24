@@ -5,7 +5,7 @@
  * @s1: pointer to 1st string
  * @s2: pointer to 2nd string
  *
- * Return: 0 if s1=s2, -ve if s1<s2, +ve if s1>s2
+ * Return: (ret) 0 if s1=s2, -ve if s1<s2, +ve if s1>s2
  */
 int _strcmp(char *s1, char *s2)
 {
