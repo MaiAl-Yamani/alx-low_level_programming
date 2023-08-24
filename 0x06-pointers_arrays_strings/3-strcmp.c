@@ -11,18 +11,19 @@ int _strcmp(char *s1, char *s2)
 {
 	int s1_len = strlen(s1);
 	int s2_len = strlen(s2);
+	int ret;
 
 	if (s1_len == s2_len)
 	{
-		return (0);
+		ret = 0;
 	}
 	else if (s1_len < s2_len)
 	{
-		return (-15);
+		ret = -15;
 	}
 	else
 	{
-		return (+15);
+		ret = +15;
 	}
-	return (0);
+	return (ret);
 }
