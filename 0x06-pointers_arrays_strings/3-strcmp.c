@@ -5,25 +5,21 @@
  * @s1: pointer to 1st string
  * @s2: pointer to 2nd string
  *
- * Return: (ret) 0 if s1=s2, -ve if s1<s2, +ve if s1>s2
+ * Return: (out) 0 if s1=s2, -ve if s1<s2, +ve if s1>s2
  */
 int _strcmp(char *s1, char *s2)
 {
-	int s1_len = strlen(s1);
-	int s2_len = strlen(s2);
-	int ret;
+	int i = 0, out = 0;
 
-	if (s1_len == s2_len)
+	while (out == 0)
 	{
-		ret = 0;
+		if ((*(s1 + i) == '/0') && (*(s2 + i) == '\0'))
+		{
+			break;
+		}
+		out = *(s1 + i) - *(s2 + i);
+		i++;
 	}
-	else if (s1_len < s2_len)
-	{
-		ret = -15;
-	}
-	else
-	{
-		ret = +15;
-	}
-	return (ret);
+
+	return (out);
 }
