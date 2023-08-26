@@ -11,17 +11,17 @@ void jack_bauer(void)
 	/* ij:kl */
 	for (i = 0; i < 10; i++)
 	{
-		_putchar(i);
+		_putchar(i + 48);
 		for (j = 0; j < 10; j++)
 		{
-			_putchar(j);
+			_putchar(j + 48);
 			_putchar(':');
 			for (k = 0; k < 10; k++)
 			{
-				_putchar(k);
+				_putchar(k + 48);
 				for (l = 0; l < 10; l++)
 				{
-					_putchar(l);
+					_putchar(l  + 48);
 					_putchar('\n');
 				}
 			}
