@@ -4,23 +4,22 @@
  * @s: pointer to string
  * @accept: pointer to string of accepted bytes
  *
- * Return: res; a pointer to the byte in s matching accept bytes
+ * Return: s a pointer to the byte in s matching accept bytes
  */
 char *_strpbrk(char *s, char *accept)
 {
+	int i;
+
 	while (*s)
 	{
-		while (*accept)
+		for (i = 0; accept[i]; i++)
 		{
-			if (*s != *accept)
-			{
-				s++;
-			}
-			else
+			if (*s == accept[i])
 			{
 				return (s);
 			}
 		}
+		s++;
 	}
 
 	return (0);
