@@ -19,8 +19,8 @@ int _strlen_recursion(char *s)
 /**
  * find_palindrome - checks for palindrome string
  * @s: pointer to string
- * i: left idx
- * j: right idx
+ * @i: left index iterator
+ * @j: right index iterator
  *
  * Return: 1 if palindrome 0 otherwise
  */
