@@ -1,7 +1,5 @@
 #include "main.h"
-#include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 /**
  * argstostr - oncatenates all the arguments of the program
  * @ac: number of command line arguments
@@ -16,13 +14,13 @@ char *argstostr(int ac, char **av)
 	int str_l;
 
 	str_l = 0, i = 0, j = 0, k = 0;
-	if (ac == 0 || av == 0)
+	if (ac == 0 || av == NULL)
 	{
 		return (NULL);
 	}
 	while (i < ac)
 	{
-		while (av[i][j] != 0)
+		while (av[i][j] != '\0')
 		{
 			str_l++, j++;
 		}
