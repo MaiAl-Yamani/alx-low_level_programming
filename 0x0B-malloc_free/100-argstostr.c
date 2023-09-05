@@ -20,6 +20,7 @@ char *argstostr(int ac, char **av)
 	}
 	while (i < ac)
 	{
+		j = 0;
 		while (av[i][j] != '\0')
 		{
 			str_l++, j++;
