@@ -17,7 +17,7 @@ char *_strdup(char *str)
 		return (NULL);
 	}
 	i = 0;
-	while (i < sizeof(str))
+	while (i < (sizeof(str) * sizeof(char)))
 	{
 		newstr[i] = str[i];
 		i++;
