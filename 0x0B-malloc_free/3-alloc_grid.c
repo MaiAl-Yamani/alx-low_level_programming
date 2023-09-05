@@ -30,7 +30,6 @@ int **alloc_grid(int width, int height)
 			ar[h][w] = 0;
 			w++;
 		}
-		_putchar('\n');
 		h++;
 	}
 	return (ar);
