@@ -24,7 +24,7 @@ char *argstostr(int ac, char **av)
 		{
 			str_l++, j++;
 		}
-		str_l++, i++;
+		i++;
 	}
 	str_l++;
 	concat_res = malloc(str_l * sizeof(char));
