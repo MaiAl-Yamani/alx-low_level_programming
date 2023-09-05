@@ -26,8 +26,7 @@ char *argstostr(int ac, char **av)
 		}
 		i++;
 	}
-	str_l++;
-	concat_res = malloc(str_l * sizeof(char));
+	concat_res = malloc(1 + str_l * sizeof(char));
 	if (concat_res == NULL)
 	{
 		free(concat_res);
