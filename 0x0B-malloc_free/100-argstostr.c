@@ -28,7 +28,8 @@ char *argstostr(int ac, char **av)
 		}
 		str_l++;
 	}
-	concat_res = (char *)malloc((str_l + 1) * sizeof(char));
+	str_l++;
+	concat_res = (char *)malloc(str_l * sizeof(char));
 	if (concat_res == NULL)
 	{
 		free(concat_res);
