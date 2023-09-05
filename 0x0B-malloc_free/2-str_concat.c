@@ -17,7 +17,7 @@ char *str_concat(char *s1, char *s2)
 	{
 		s1 = "";
 	}
-	else if (s2 == NULL)
+	if (s2 == NULL)
 	{
 		s2 = "";
 	}
@@ -38,6 +38,6 @@ char *str_concat(char *s1, char *s2)
 		concat_str[i + j] = s2[j];
 		j++;
 	}
-	concat_str[j] = '\0';
+	concat_str[i + j] = '\0';
 	return (concat_str);
 }
