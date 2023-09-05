@@ -16,6 +16,10 @@ char *argstostr(int ac, char **av)
 	int str_l;
 
 	str_l = 0, i = 0, j = 0, k = 0;
+	if (ac == 0 || av == 0)
+	{
+		return (NULL);
+	}
 	for (i = 0; i < ac; i++)
 	{
 		while (av[i][j] != '\0')
