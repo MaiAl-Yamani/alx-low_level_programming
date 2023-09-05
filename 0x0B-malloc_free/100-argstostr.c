@@ -32,7 +32,16 @@ char *argstostr(int ac, char **av)
 		free(concat_res);
 		return (NULL);
 	}
-	i = 0;
+	for (i = 0; i < ac; i++)
+	{
+		for (j = 0; av[i][j]; j++)
+		{
+			concat_res[k++] = av[i][j];
+		}
+		concat_res[k++] = '\n';
+	}
+	concat_res[k++] = '\0';
+	/**i = 0;
 	while (i < ac)
 	{
 		j = 0;
@@ -44,6 +53,6 @@ char *argstostr(int ac, char **av)
 		concat_res[k] = '\n';
 		k++, i++;
 	}
-	concat_res[k++] = '\0';
+	concat_res[k++] = '\0';**/
 	return (concat_res);
 }
