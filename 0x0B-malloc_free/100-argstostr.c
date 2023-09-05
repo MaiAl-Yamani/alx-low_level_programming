@@ -29,14 +29,13 @@ char *argstostr(int ac, char **av)
 		str_l++;
 	}
 	str_l++;
-	concat_res = (char *)malloc(str_l * sizeof(char));
+	concat_res = malloc(str_l * sizeof(char));
 	if (concat_res == NULL)
 	{
 		free(concat_res);
 		return (NULL);
 	}
 	i = 0;
-	k = 0;
 	while (i < ac)
 	{
 		j = 0;
