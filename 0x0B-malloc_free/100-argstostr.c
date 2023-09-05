@@ -24,8 +24,7 @@ char *argstostr(int ac, char **av)
 	{
 		while (av[i][j] != '\0')
 		{
-			str_l++;
-			j++;
+			str_l++, j++;
 		}
 		str_l++;
 	}
@@ -43,12 +42,10 @@ char *argstostr(int ac, char **av)
 		while (av[i][j] != '\0')
 		{
 			concat_res[k] = av[i][j];
-			k++;
-			j++;
+			k++, j++;
 		}
 		concat_res[k] = '\n';
-		k++;
-		i++;
+		k++, i++;
 	}
 	concat_res[k] = '\0';
 	return (concat_res);
