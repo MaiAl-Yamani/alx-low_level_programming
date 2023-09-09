@@ -11,7 +11,8 @@
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	char *_concat, *ptr;
+	char *_concat;
+       	/* *ptr;*/
 	unsigned int i;
 	unsigned int len1 = 0, len2 = 0;
 
@@ -36,15 +37,15 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		return (NULL);
 	}
-	ptr = _concat;
+	/*ptr = _concat;*/
 	for (i = 0; i < len1; i++)
 	{
-		ptr[i] = s1[i];
+		_concat[i] = s1[i];
 	}
 	for (i = 0; i < n; i++)
 	{
-		ptr[len1 + i] = s2[i];
+		_concat[len1 + i] = s2[i];
 	}
-	ptr[len1 + n] = '\0';
+	_concat[len1 + n] = '\0';
 	return (_concat);
 }
