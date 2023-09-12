@@ -6,7 +6,7 @@
  * @age: dog's age
  * @owner: dog's owner
  *
- * Return: a new dog of type dog_t
+ * Return: a pointer new dog of type dog_t
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
@@ -21,7 +21,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 	while (owner[len_owner++])
 		;
 
-	new_dog = malloc(sizeof(dog_t));
+	new_dog = (dog_t *)malloc(sizeof(dog_t));
 	if (new_dog == NULL)
 		return (NULL);
 
