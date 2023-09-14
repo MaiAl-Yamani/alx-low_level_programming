@@ -13,7 +13,7 @@ int op_add(int a, int b)
 	/* op_t *add_ptr;*/
 	/*add_ptr->op = "+";*/
 	/*add_ptr->f = (*get_op_func)(a, b); */
-	return(a + b);
+	return (a + b);
 }
 /**
  * op_sub - subtract two integers
