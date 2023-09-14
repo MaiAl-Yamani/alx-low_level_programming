@@ -10,9 +10,6 @@
  */
 int op_add(int a, int b)
 {
-	/* op_t *add_ptr;*/
-	/*add_ptr->op = "+";*/
-	/*add_ptr->f = (*get_op_func)(a, b); */
 	return (a + b);
 }
 /**
@@ -24,9 +21,6 @@ int op_add(int a, int b)
  */
 int op_sub(int a, int b)
 {
-	/*op_t *sub_ptr;*/
-	/*sub_ptr->op  = "-";*/
-	/*sub_ptr->(*f)(int, int) = a - b;*/
 	return (a - b);
 }
 /**
@@ -38,9 +32,6 @@ int op_sub(int a, int b)
  */
 int op_mul(int a, int b)
 {
-	/*op_t *mul_ptr;*/
-	/*mul_ptr->op = "*";*/
-	/*mul_ptr->(*f)(int, int) = a * b;*/
 	return (a * b);
 }
 /**
@@ -52,14 +43,11 @@ int op_mul(int a, int b)
  */
 int op_div(int a, int b)
 {
-	/*op_t div_ptr;*/
 	if (b == 0)
 	{
 		printf("Error\n");
 		exit(100);
 	}
-	/*div_ptr->op = "/";*/
-	/*div_ptr->(*f)(int, int) = a / b;*/
 	return (a / b);
 }
 /**
@@ -71,13 +59,10 @@ int op_div(int a, int b)
  */
 int op_mod(int a, int b)
 {
-	/*op_t mod_ptr;*/
 	if (b == 0)
 	{
 		printf("Error\n");
 		exit(100);
 	}
-	/*mod_ptr->op = "%";*/
-	/*mod_ptr->(*f)(int, int) = a % b;*/
 	return (a % b);
 }
