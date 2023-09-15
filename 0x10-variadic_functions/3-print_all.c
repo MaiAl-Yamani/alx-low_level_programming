@@ -26,7 +26,7 @@ void print_all(const char * const format, ...)
 			case 'c':
 				printf("%s%c", sep, va_arg(ap, int));
 				break;
-			case 'd':
+			case 'f':
 				printf("%s%f", sep, va_arg(ap, double));
 				break;
 			case 's':
