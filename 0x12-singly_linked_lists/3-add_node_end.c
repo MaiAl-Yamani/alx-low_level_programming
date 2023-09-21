@@ -1,6 +1,6 @@
+#include "lists.h"
 #include <stdlib.h>
 #include <string.h>
-#include "lists.h"
 /**
  * add_node_end - adds node at the end of list_t
  * @head: pointer to pointer to list_t
@@ -12,7 +12,9 @@ list_t *add_node_end(list_t **head, const char *str)
 {
 	list_t *new_node;
 	list_t *current = *head;
+	/*int s_len;*/
 
+	/*for (s_len = 0; dup_str[s_len] != '\0'; s_len++)*/
 	current = *head;
 	new_node = malloc(sizeof(list_t));
 	if (new_node == NULL)
