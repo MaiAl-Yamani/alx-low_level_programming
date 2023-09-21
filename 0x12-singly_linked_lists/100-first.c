@@ -1,7 +1,8 @@
 #include <stdio.h>
 void main_constructor(void) __attribute__((constructor));
 /**
- * main_constructor -constructor function that prints a msg before main excution
+ * main_constructor - constructor function that prints a msg
+ * before main excution
  *
  * Return: void
  */
