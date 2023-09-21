@@ -1,7 +1,6 @@
 #include "lists.h"
 #include <stdlib.h>
 #include <string.h>
-#include <stdio.h>
 /**
  * add_node_end - adds node at the end of list_t
  * @head: pointer to pointer to list_t
@@ -15,7 +14,7 @@ list_t *add_node_end(list_t **head, const char *str)
 	list_t *current = *head;
 	int c;
 	char *dup_str;
-       
+
 	dup_str = strdup(str);
 	current = *head;
 	while (current && current->next != NULL)
