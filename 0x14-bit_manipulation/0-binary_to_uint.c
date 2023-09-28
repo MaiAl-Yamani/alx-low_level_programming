@@ -1,5 +1,5 @@
 #include "main.h"
-#include <string.h>
+#include <stddef.h>
 /**
  * Pow - returns result of a to the power of b
  * @a: base
@@ -26,11 +26,13 @@ int Pow(int a, int b)
 unsigned int binary_to_uint(const char *b)
 {
 	unsigned int n = 0;
-	int len = strlen(b);
+	int len = 0;
 	int i;
 
 	if (b == NULL)
 		return (0);
+	for (i = 0; b[i] != '\0'; i++)
+		len++;
 	for (i = 0; i < len; i++)
 	{
 		if (b[i] != '0' && b[i] != '1')
