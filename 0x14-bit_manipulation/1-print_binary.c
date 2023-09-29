@@ -14,7 +14,7 @@ void print_binary(unsigned long int n)
 
 	if (n == 0)
 		_putchar('0');
-	bin = malloc(sizeof(unsigned long int) + 1);
+	bin = malloc(65);
 	if (bin == NULL)
 		return;
 	while (n != 0)
