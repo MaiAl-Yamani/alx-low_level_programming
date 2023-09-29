@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stddef.h>
 /**
  * Pow - returns result of a to the power of b
  * @a: base
