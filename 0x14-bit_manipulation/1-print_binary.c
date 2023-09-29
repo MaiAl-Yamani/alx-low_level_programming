@@ -8,7 +8,8 @@
  */
 void print_binary(unsigned long int n)
 {
-	int res, idx = 0;
+	unsigned long int res;
+	int idx = 0;
 	char *bin;
 
 	if (n == 0)
