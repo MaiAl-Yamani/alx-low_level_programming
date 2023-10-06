@@ -5,6 +5,9 @@
 #include <fcntl.h>
 #include <stdlib.h>
 #include <stdio.h>
+#include <elf.h>
+#include <sys/types.h>
+#include <sys/stat.h>
 
 #define RD_BUF_SIZE 1024
 
