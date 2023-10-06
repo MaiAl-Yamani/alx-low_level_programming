@@ -104,7 +104,7 @@ void print_osabi(Elf64_Ehdr h)
 			printf("UNIX - Linux");
 			break;
 		case ELFOSABI_SOLARIS:
-			printf("UNIX - Sun Solaris");
+			printf("UNIX - Solaris");
 			break;
 		case ELFOSABI_AIX:
 			printf("UNIX - AIX");
