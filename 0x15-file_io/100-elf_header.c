@@ -30,13 +30,13 @@ void print_class(Elf64_Ehdr h)
 	{
 		case ELFCLASS32:
 			printf("ELF32");
-			break;
+		break;
 		case ELFCLASS64:
 			printf("ELF64");
-			break;
+		break;
 		case ELFCLASSNONE:
 			printf("Invalid class");
-			break;
+		break;
 	}
 	printf("\n");
 }
@@ -52,13 +52,13 @@ void print_data(Elf64_Ehdr h)
 	{
 		case ELFDATA2MSB:
 			printf("2's complement, big endian");
-			break;
+		break;
 		case ELFDATA2LSB:
 			printf("2's complement, little endian");
-			break;
+		break;
 		case ELFDATANONE:
 			printf("Invalid data encoding");
-			break;
+		break;
 	}
 	printf("\n");
 }
@@ -69,15 +69,16 @@ void print_data(Elf64_Ehdr h)
  */
 void print_version(Elf64_Ehdr h)
 {
-	printf("  Version:                            %d", h.e_ident[EI_VERSION]);
+	printf("  Version:                           %d", h.e_ident[EI_VERSION]);
 	switch (h.e_ident[EI_VERSION])
 	{
 		case EV_CURRENT:
 			printf(" (current)");
-			break;
+		break;
 		case EV_NONE:
 			printf("%s", "");
-			break;
+		break;
+		break;
 	}
 	printf("\n");
 }
@@ -154,7 +155,7 @@ void print_osabi_more(Elf64_Ehdr h)
  */
 void print_abiversion(Elf64_Ehdr h)
 {
-	printf("  ABI Version:                        %d\n",
+	printf("  ABI Version:                       %d\n",
 			h.e_ident[EI_ABIVERSION]);
 }
 /**
