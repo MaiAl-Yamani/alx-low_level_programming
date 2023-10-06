@@ -16,7 +16,7 @@ int main(int ac, char **av)
 {
 	int fd_from = 0, fd_to = 0;
 	ssize_t bytes;
-	char buf[1024];
+	char buf[RD_BUF_SIZE];
 
 	if (ac != 3)
 		dprintf(STDERR_FILENO, USAGE), exit(97);
@@ -24,10 +24,10 @@ int main(int ac, char **av)
 	if (fd_from == -1)
 		dprintf(STDERR_FILENO, ERR_READ, av[1]), exit(98);
 	fd_to = open(av[2], O_WRONLY | O_CREAT | O_TRUNC,
-			S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH);
+			(S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH));
 	if (fd_to == -1)
 		dprintf(STDERR_FILENO, ERR_WRITE, av[2]), exit(99);
-	while ((bytes = read(fd_from, buf, 1024)) > 0)
+	while ((bytes = read(fd_from, buf, RD_BUF_SIZE)) > 0)
 		if (write(fd_to, buf, bytes) != bytes)
 			dprintf(STDERR_FILENO, ERR_WRITE, av[2]), exit(99);
 	if (bytes == -1)
