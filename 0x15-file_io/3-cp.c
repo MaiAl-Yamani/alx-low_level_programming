@@ -4,6 +4,7 @@
 #define ERR_READ "Error: Can't read from file %s\n"
 #define ERR_WRITE "Error: Can't write to %s\n"
 #define ERR_CLOSE "Error: Can't close fd %d\n"
+#define PERMISSIONS (S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH)
 
 /**
  * main - program that copies the content of a file to another
@@ -23,8 +24,7 @@ int main(int ac, char **av)
 	fd_from = open(av[1], O_RDONLY);
 	if (fd_from == -1)
 		dprintf(STDERR_FILENO, ERR_READ, av[1]), exit(98);
-	fd_to = open(av[2], O_WRONLY | O_CREAT | O_TRUNC,
-			(S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH));
+	fd_to = open(av[2], O_WRONLY | O_CREAT | O_TRUNC, PERMISSIONS);
 	if (fd_to == -1)
 		dprintf(STDERR_FILENO, ERR_WRITE, av[2]), exit(99);
 	while ((bytes = read(fd_from, buf, RD_BUF_SIZE)) > 0)
@@ -38,5 +38,5 @@ int main(int ac, char **av)
 		dprintf(STDERR_FILENO, ERR_CLOSE, fd_from), exit(100);
 	if (fd_to)
 		dprintf(STDERR_FILENO, ERR_CLOSE, fd_from), exit(100);
-	return (1);
+	return (EXIT_SUCCESS);
 }
