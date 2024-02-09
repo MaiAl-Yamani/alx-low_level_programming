@@ -1,4 +1,4 @@
-#include "main.h"
+#include "m.h"
 
 /**
  * main - Entry point
@@ -10,3 +10,4 @@ int main()
 	print_school();
 	return 0;
 }
+/* School */

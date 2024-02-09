@@ -1,4 +1,4 @@
-#include "main.h"
+#include "m.h"
 
 void print_school(void)
 {
