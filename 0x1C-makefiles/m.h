@@ -1,8 +1,8 @@
-#ifndef _MAIN_H_
-#define _MAIN_H_
+#ifndef _M_H_
+#define _M_H_
 
 #include <stdio.h>
 
 void print_school(void);
 
-#endif /* _MAIN_H_ */
+#endif /* _M_H_ */
